@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-nginxx
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: hello-nginxx
+
+  template:
+    metadata:
+      labels:
+        app: hello-nginxx
+
+    spec:
+      containers:
+      - name: nginx
+        image: gopinathtask/hello-nginxx:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80  
