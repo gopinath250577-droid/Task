@@ -47,11 +47,11 @@ jobs:
 
       - name: Restart Deployment
         run: |
-          kubectl rollout restart deployment hello-nginx
+          kubectl rollout restart deployment hello-nginxx
 
       - name: Wait for Rollout
         run: |
-          kubectl rollout status deployment/hello-nginx --timeout=180s
+          kubectl rollout status deployment/hello-nginxx --timeout=180s
 
       - name: Verify Deployment
         run: |
